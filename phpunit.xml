@@ -10,9 +10,19 @@
 >
     <testsuites>
         <testsuite name="Unit">
-            <directory>Unit</directory>
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
         </testsuite>
     </testsuites>
+
+    <coverage>
+        <include>
+            <directory suffix=".php">./app</directory>
+        </include>
+    </coverage>
+
     <filter>
         <whitelist>
             <directory suffix=".php">../src</directory>
