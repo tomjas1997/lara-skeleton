@@ -2,7 +2,6 @@
 
 namespace Skeleton\Tests\Unit;
 
-use Psr\Log\LoggerInterface;
 use Skeleton\Tests\TestCase;
 
 class ExampleTest extends TestCase
