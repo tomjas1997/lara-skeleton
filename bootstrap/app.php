@@ -4,6 +4,10 @@ if (file_exists(__DIR__.'/../vendor/autoload.php')) {
     require __DIR__.'/../vendor/autoload.php';
 }
 
+if (file_exists(__DIR__.'/../../../config/config.inc.php')) {
+    require __DIR__.'/../../../config/config.inc.php';
+}
+
 if (file_exists(__DIR__.'/../../../vendor/autoload.php')) {
     require __DIR__.'/../../../vendor/autoload.php';
 }
