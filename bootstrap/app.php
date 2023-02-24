@@ -1,14 +1,11 @@
 <?php
 
-$rootDirectory = __DIR__ . '/../../../';
-$projectDir = __DIR__ . '/../';
-
-if (file_exists($rootDirectory . 'vendor/autoload.php')) {
-    require_once $rootDirectory . 'vendor/autoload.php';
+if (file_exists(__DIR__.'/../vendor/autoload.php')) {
+    require __DIR__.'/../vendor/autoload.php';
 }
 
-if (file_exists($rootDirectory . 'autoload.php')) {
-    require_once $rootDirectory . 'autoload.php';
+if (file_exists(__DIR__.'/../../../vendor/autoload.php')) {
+    require __DIR__.'/../../../vendor/autoload.php';
 }
 
 $app = new \Invertus\Laracore\Vendor\Foundation\Application\Application(
