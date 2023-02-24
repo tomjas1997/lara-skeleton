@@ -15,7 +15,16 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-require __DIR__.'/vendor/autoload.php';
+$rootDirectory = __DIR__ . '/../../../';
+$projectDir = __DIR__ . '/../';
+
+if (file_exists($rootDirectory . 'vendor/autoload.php')) {
+    require_once $rootDirectory . 'vendor/autoload.php';
+}
+
+if (file_exists($rootDirectory . 'autoload.php')) {
+    require_once $rootDirectory . 'autoload.php';
+}
 
 $app = require_once __DIR__.'/bootstrap/app.php';
 
@@ -30,8 +39,6 @@ $app = require_once __DIR__.'/bootstrap/app.php';
 |
 */
 
-$logger = $app->make('log');
-$logger->error('test');
 $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
 
 $status = $kernel->handle(
